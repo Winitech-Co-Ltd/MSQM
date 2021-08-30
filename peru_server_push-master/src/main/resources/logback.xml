@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+
+	<property name="LOG_DIR_W" value="C:\logs" />
+	<property name="LOG_DIR_L" value="logs" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+	            %d{HH:mm:ss} [%thread] %-5level %logger{35} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR_L}/peru_push_now.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${LOG_DIR_L}/peru_push_post.log.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <!-- keep 30 days' worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+	
+	<!--
+	<logger name="com.smos" level="INFO">
+		<appender-ref ref="FILE" />
+	</logger> -->
+   
+    <!-- <logger name="com.example.mypackage" level="DEBUG" /> -->
+    <!-- <logger name="org.springframework" level="INFO" >
+    	<appender-ref ref="FILE" />
+    </logger> -->
+
+    <!-- turn OFF all logging (children can override) -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>

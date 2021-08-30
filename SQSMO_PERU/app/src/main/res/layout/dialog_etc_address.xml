@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/abl_addr_change"
+        style="@style/Toolbar_Title">
+
+        <TextView
+            style="@style/Toolbar_TextView"
+            android:text="@string/addr_change" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_jujeonbu"
+                style="@style/Enroll.EditText"
+                android:drawableRight="@drawable/selector_arrow_under"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/region"
+                android:inputType="textPersonName"
+                android:paddingEnd="5dp"/>
+
+            <Button
+                android:id="@+id/bt_sijeongu"
+                style="@style/Enroll.EditText"
+                android:drawableRight="@drawable/selector_arrow_under"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/provincia"
+                android:inputType="textPersonName"
+                android:paddingEnd="5dp"/>
+
+            <Button
+                android:id="@+id/bt_gucheong"
+                style="@style/Enroll.EditText"
+                android:drawableRight="@drawable/selector_arrow_under"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/distrito"
+                android:inputType="textPersonName"
+                android:paddingEnd="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1.2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="@string/addr_input_etc"
+                    android:textColor="@color/colorBlack" />
+
+                <EditText
+                    android:id="@+id/et_addr_etc"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:maxLength="250"
+                    android:background="@drawable/edittext_border"
+                    android:gravity="center_vertical"
+                    android:hint="@string/addr_input_etc_hint"
+                    android:inputType="text"
+                    android:paddingStart="10dp"
+                    android:textColor="@color/colorBlack" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_addr_close"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_blue_left"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:id="@+id/ll_addr_save"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_blue_right"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PIN_NUMBER_CREATE"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

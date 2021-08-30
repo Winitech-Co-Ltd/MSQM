@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/abl_lang"
+        style="@style/Toolbar_Title">
+
+        <TextView
+            style="@style/Toolbar_TextView"
+            android:text="@string/my_info" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/Manager.Title"
+            android:text="@string/group" />
+
+        <TextView
+            android:id="@+id/tv_manager_part"
+            style="@style/Manager.Body"
+            android:text="-"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            style="@style/Manager.Title"
+            android:text="@string/name_rank" />
+
+        <TextView
+            android:id="@+id/tv_manager_name"
+            style="@style/Manager.Body"
+            android:text="-"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            style="@style/Manager.Title"
+            android:text="@string/login_id" />
+
+        <TextView
+            android:id="@+id/tv_manager_id"
+            style="@style/Manager.Body"
+            android:text="-"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            style="@style/Manager.Title"
+            android:text="@string/login_phone_number" />
+
+        <TextView
+            android:id="@+id/tv_manager_phone"
+            style="@style/Manager.Body"
+            android:drawableEnd="@drawable/ic_phone_blue"
+            android:paddingStart="10dp"
+            android:paddingEnd="20dp"
+            android:text="01012344567"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_manager_close"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_blue_left"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/close_agree"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="PERU_MNGR">
+
+	<!-- Inicio de sesión del administrador -->
+	<select id="selectMngrList" resultType="MlMap">
+		SELECT
+			MNGR_SN,
+			LOGIN_ID,
+			PSITN_DPRTMNT_CODE,
+			PSITN_PRVNCA_CODE,
+			PSITN_DSTRT_CODE,
+			PSITN_DEPT_NM,
+			MNGR_NM,
+			MBTLNUM,
+			OFFM_TELNO,
+			SKYPE_ID,
+			WHATSUP_ID,
+			PUSHID
+		FROM 
+			TISL_MNGR
+		WHERE 
+			DELETE_AT = 'N'
+		<choose>
+			<when test='MNGR_SN != null and MNGR_SN !="" '>
+				AND MNGR_SN = TRIM(#{MNGR_SN})::NUMERIC
+			</when>
+			<when test='LOGIN_ID != null and LOGIN_ID !="" and PASSWORD != null and PASSWORD !="" '>
+				AND LOGIN_ID = TRIM(#{LOGIN_ID})
+				AND PASSWORD = encode(encrypt(#{PASSWORD}::bytea, 'ANOROC', '3des'), 'hex')
+			</when>
+			<otherwise>
+				AND LOGIN_ID = TRIM(#{LOGIN_ID})
+				<!-- AND PASSWORD = TRIM(#{PASSWORD}) -->
+				AND REPLACE(MBTLNUM,'-','') = REPLACE(TRIM(#{MBTLNUM}),'-','')
+				AND REPLACE(TRIM(MNGR_NM),' ','') = REPLACE(TRIM(#{MNGR_NM}),' ','')
+			</otherwise>
+		</choose>
+	</select>
+
+	<!-- Update de información del administrador -->
+	<update id="updateMngr">
+		UPDATE 
+			TISL_MNGR
+		SET
+		<trim suffixOverrides=",">
+			MNGR_SN = #{MNGR_SN}::NUMERIC,
+			<if test="PUSHID != null">PUSHID=#{PUSHID},</if>
+			<if test="TRMNL_KND_CODE != null">TRMNL_KND_CODE=#{TRMNL_KND_CODE},</if>
+			<if test="IS_LOGIN != null">LOGIN_AT=#{IS_LOGIN},</if>
+			UPDT_DT = TO_CHAR(CURRENT_TIMESTAMP,'YYYYMMDDHH24MISS'),
+		</trim>
+		WHERE 1=1
+		AND MNGR_SN = #{MNGR_SN}::NUMERIC
+	</update>
+	
+
+	<!-- Búsqueda de lista de persona en autocuarentena -->
+	<select id="selectIslprsnList" resultType="MlMap">
+		SELECT A5.*
+		, case when ISLLC_PRVNCA_CODE_NM = ISLLC_DSTRT_CODE_NM and ISLLC_PRVNCA_CODE_NM = ISLLC_DPRTMNT_CODE_NM then ISLLC_DPRTMNT_CODE_NM
+		   when ISLLC_PRVNCA_CODE_NM = ISLLC_DSTRT_CODE_NM then concat(ISLLC_DPRTMNT_CODE_NM ,' ',ISLLC_PRVNCA_CODE_NM) 
+		   else trim(concat(ISLLC_DSTRT_CODE_NM ,' ',ISLLC_PRVNCA_CODE_NM,' ', ISLLC_DPRTMNT_CODE_NM)) end addr
+		, CEIL(tot_cnt/10::numeric)::int AS TOT_PAGE 
+		, (case when length(brthdy::text) = 8 then concat(substring(brthdy::text,7,2),'/',substring(brthdy::text,5,2),'/',substring(brthdy::text,1,4)) else brthdy::text end) aS BRTHDY_F
+		FROM(
+			SELECT 
+			A4.*
+			, get_tcm_adresname(A4.ISLLC_DPRTMNT_CODE, '00' , '00') AS ISLLC_DPRTMNT_CODE_NM
+			, get_tcm_adresname(A4.ISLLC_DPRTMNT_CODE, A4.ISLLC_PRVNCA_CODE, '00') AS ISLLC_PRVNCA_CODE_NM
+			, get_tcm_adresname(A4.ISLLC_DPRTMNT_CODE, A4.ISLLC_PRVNCA_CODE, A4.ISLLC_DSTRT_CODE) AS ISLLC_DSTRT_CODE_NM
+			, GET_TCM_CODENAME(A4.ISLPRSN_STTUS_CODE) AS ISLPRSN_STTUS_CODE_NM
+			, GET_TCM_CODENAME(A4.SEXDSTN_CODE) AS SEXDSTN_CODE_NM
+			,#{DISTANCE} AS DISTANCE
+			FROM (
+				SELECT 
+					AAA.*
+				FROM (
+				SELECT AA.*
+				<![CDATA[, CASE WHEN ISLPRSN_STTUS_CODE <> '00301' THEN GET_TCM_CODENAME(ISLPRSN_STTUS_CODE)]]>
+					   WHEN ISLPRSN_NTW_STTUS_CODE = '1' THEN 'Sin Comunicación '
+					   WHEN ISLPRSN_NTW_STTUS_CODE = '2' THEN 'GPS Apagado'
+				       WHEN ISLPRSN_NTW_STTUS_CODE = '3' THEN 'Fuera de área'
+				       WHEN ISLPRSN_NTW_STTUS_CODE = '4' THEN 'En área'
+				       ELSE '' END ISLPRSN_NTW_STTUS_CODE_NM
+				, CASE WHEN SLFDGNSS_AM_CODE = '1' THEN 'Síntomas'
+					   WHEN SLFDGNSS_AM_CODE = '2' THEN 'O'
+					   WHEN SLFDGNSS_AM_CODE = '3' THEN 'X'
+				       ELSE '' END AS SLFDGNSS_AM_CODE_NM
+				, CASE WHEN SLFDGNSS_PM_CODE = '1' THEN 'Síntomas'
+				       WHEN SLFDGNSS_PM_CODE = '2' THEN 'O'
+					   WHEN SLFDGNSS_PM_CODE = '3' THEN 'X'
+					   ELSE '' END AS SLFDGNSS_PM_CODE_NM
+				, CASE WHEN SLFDGNSS_AM_CODE = '1' OR SLFDGNSS_PM_CODE = '1' THEN 'Y'
+					   ELSE 'N' END AS SLFDGNSS_GUBN_AT 
+				, ROW_NUMBER() OVER (ORDER BY
+				(case when  ISLPRSN_STTUS_CODE = '00301' then 1 else 2 end), REGIST_DT DESC ) ROW_NUM, COUNT(*) OVER() AS TOT_CNT FROM (
+				SELECT A.*
+				, CASE WHEN A.LAST_COMM_DT IS NULL OR TO_CHAR(current_timestamp-(INTERVAL '15' MINUTE),'YYYYMMDDHH24MISS') > A.LAST_COMM_DT  THEN '1'
+					 WHEN A.GPS_ONOFF = 'OFF' THEN '2'
+					 WHEN G.LC_COLCT_DT IS NOT NULL THEN '3'
+				     ELSE '4' END ISLPRSN_NTW_STTUS_CODE
+				, B.ISLPRSN_STTUS_CODE
+				, CASE WHEN B.ISLPRSN_STTUS_CODE = '00302' THEN 'Y' ELSE 'Y' END AS ITEM_OPEN_AT
+				, B.STTUS_REGIST_DT
+				, C.ISLPRSN_XCNTS
+				, C.ISLPRSN_YDNTS
+				, C.LC_COLCT_DT
+				, CASE WHEN (D.PYRXIA_AT = 'Y' OR D.COUGH_AT = 'Y' OR D.SORE_THROAT_AT=
+				'Y' OR D.DYSPNEA_AT= 'Y') THEN '1'
+				WHEN (D.PYRXIA_AT = 'N' AND D.COUGH_AT = 'N' AND D.SORE_THROAT_AT= 'N' AND
+				D.DYSPNEA_AT= 'N') THEN '2'
+				ELSE '3' END SLFDGNSS_AM_CODE
+				, CASE WHEN (E.PYRXIA_AT = 'Y' OR E.COUGH_AT = 'Y' OR E.SORE_THROAT_AT=
+				'Y' OR E.DYSPNEA_AT= 'Y') THEN '1'
+				WHEN (E.PYRXIA_AT = 'N' AND E.COUGH_AT = 'N' AND E.SORE_THROAT_AT= 'N' AND
+				E.DYSPNEA_AT= 'N') THEN '2'
+				ELSE '3' END SLFDGNSS_PM_CODE
+				FROM (
+					SELECT
+					ti.ISLPRSN_SN
+					,ti.ISLPRSN_NM
+					,ti.SEXDSTN_CODE
+					,ti.NLTY_CODE
+					--,GET_TCM_CODENAME(ti.NLTY_CODE) AS NLTY_CODE_NM
+					,ti.ISLLC_XCNTS
+					,ti.ISLLC_YDNTS
+					,ti.ISLLC_DPRTMNT_CODE
+					,ti.ISLLC_DSTRT_CODE
+					,ti.ISLLC_PRVNCA_CODE
+					,ti.ISLLC_ETC_ADRES
+					,tm.MNGR_SN
+					, tt.GPS_ONOFF
+					, tt.GPS_OFF_DT
+					, tt.LAST_COMM_DT
+					,tt.TELNO AS TELNO
+					,tt.EMGNC_TELNO AS EMGNC_TELNO
+					, tt.CRTFC_NO
+					, ti.PSPRNBR
+					, tt.TRMNL_SN
+					, ti.REGIST_DT
+					, tt.LC_TRNSMIS_USE_AT
+					, ti.BRTHDY
+					FROM TISL_MNGR tm JOIN TISL_ISLPRSN ti
+					ON 1=1
+					AND tm.MNGR_SN = #{MNGR_SN}::NUMERIC
+					LEFT OUTER JOIN TISL_TRMNL tt
+					ON ti.ISLPRSN_SN = tt.ISLPRSN_SN
+					AND
+					ti.DELETE_AT = 'N'
+					WHERE 1=1
+					AND tt.DELETE_AT ='N'
+					AND ti.ECSHG_MNGR_SN =
+					tm.MNGR_SN
+				) A LEFT OUTER JOIN (
+				select a.*
+				from TISL_ISLPRSN_STTUS_HIST a
+				left OUTER join TISL_ISLPRSN_STTUS_HIST b
+				on a.ISLPRSN_SN = b.ISLPRSN_SN
+						 and b.STTUS_REGIST_DT > a.STTUS_REGIST_DT 
+				where 1=1
+				and b.ISLPRSN_SN is NULL
+				) B
+				ON A.ISLPRSN_SN = B.ISLPRSN_SN
+				LEFT OUTER JOIN
+				( SELECT al.*
+				FROM TISL_ISLPRSN_LC al
+				LEFT OUTER JOIN TISL_ISLPRSN_LC bl
+				ON al.ISLPRSN_SN = bl.ISLPRSN_SN
+								   AND bl.LC_COLCT_DT > al.LC_COLCT_DT 
+				WHERE 1=1
+				AND bl.ISLPRSN_SN IS NULL
+				) C
+				ON A.ISLPRSN_SN = C.ISLPRSN_SN
+				LEFT OUTER JOIN ( SELECT a1.*
+				FROM TISL_ISLPRSN_SLFDGNSS a1
+				LEFT OUTER JOIN TISL_ISLPRSN_SLFDGNSS a2
+				ON a1.ISLPRSN_SN = a2.ISLPRSN_SN
+				AND GET_SLFDGNSS_AMFM(a1.SLFDGNSS_DT) = 'AM'
+				AND GET_SLFDGNSS_AMFM(a2.SLFDGNSS_DT) = 'AM'
+				AND a2.SLFDGNSS_DT > a1.SLFDGNSS_DT 
+				AND a1.ISLPRSN_SN = a2.ISLPRSN_SN
+				WHERE 1=1
+				AND a2.ISLPRSN_SN IS NULL
+				AND GET_SLFDGNSS_AMFM(a1.SLFDGNSS_DT) = 'AM'
+				) D
+				ON A.ISLPRSN_SN = D.ISLPRSN_SN
+				LEFT OUTER JOIN ( SELECT a1.*
+				FROM TISL_ISLPRSN_SLFDGNSS a1
+				LEFT OUTER JOIN TISL_ISLPRSN_SLFDGNSS a2
+				ON 1=1
+				AND GET_SLFDGNSS_AMFM(a1.SLFDGNSS_DT) = 'FM'
+				AND GET_SLFDGNSS_AMFM(a2.SLFDGNSS_DT) = 'FM'
+				AND a2.SLFDGNSS_DT > a1.SLFDGNSS_DT
+				AND a1.ISLPRSN_SN = a2.ISLPRSN_SN
+				WHERE 1=1
+				AND a2.ISLPRSN_SN IS NULL
+				AND GET_SLFDGNSS_AMFM(a1.SLFDGNSS_DT) = 'FM'
+				) E
+				ON A.ISLPRSN_SN = E.ISLPRSN_SN
+				LEFT OUTER JOIN TISL_ISLPRSN_LC F
+				ON A.ISLPRSN_SN = F.ISLPRSN_SN
+				AND A.TRMNL_SN = F.TRMNL_SN
+				LEFT OUTER JOIN TISL_ISLPRSN_SCESN_LC G
+				ON A.ISLPRSN_SN = G.ISLPRSN_SN
+				WHERE 1=1
+				<if test='ISLPRSN_NM != null and ISLPRSN_NM != "" '>
+					AND REPLACE(ISLPRSN_NM,' ','') like '%'||REPLACE(#{ISLPRSN_NM},' ','')||'%'
+				</if>
+				<if test='SEXDSTN_CODE != null and SEXDSTN_CODE != "" '>
+					AND SEXDSTN_CODE = #{SEXDSTN_CODE}
+				</if>
+				<if test='NLTY_CODE != null and NLTY_CODE != "" '>
+					AND NLTY_CODE = #{NLTY_CODE}
+				</if>
+				/*AND ISLPRSN_STTUS_CODE NOT IN ('00302')*/
+				ORDER BY A.REGIST_DT DESC
+				) AA
+				) AAA
+				WHERE 1=1
+				<if test='PAGE != null and PAGE != "" '>
+					AND ROW_NUM BETWEEN (#{PAGE}::numeric - 1) * 15 +1 AND ((#{PAGE}::numeric - 1) * 15) + 15
+				</if>
+			) A4
+		) A5
+	</select>
+
+	<!-- Registrar historial de estado de la persona en autocuarentena -->
+	<insert id="insertIslprsnStattus">
+		<selectKey keyProperty="STTUS_REGIST_DT" resultType="String" order="BEFORE">
+			SELECT TO_CHAR(CURRENT_TIMESTAMP, 'YYYYMMDDHH24MISS')
+		</selectKey>
+		INSERT INTO TISL_ISLPRSN_STTUS_HIST
+		(
+			ISLPRSN_SN,
+			STTUS_REGIST_DT,
+			ISLPRSN_STTUS_CODE,
+			MNGR_SN
+		)
+		VALUES
+		(
+			#{ISLPRSN_SN}::NUMERIC::NUMERIC,
+			#{STTUS_REGIST_DT},
+			#{ISLPRSN_STTUS_CODE},
+			#{MNGR_SN}::NUMERIC
+		)
+	</insert>
+
+	<!-- Búsqueda de lista de estado de la persona en autocuarentena -->
+	<select id="selectIslprsnStattusList" resultType="MlMap">
+		SELECT
+			ISLPRSN_SN, 
+			STTUS_REGIST_DT, 
+			ISLPRSN_STTUS_CODE, 
+			MNGR_SN
+		FROM 
+			TISL_ISLPRSN_STTUS_HIST
+		WHERE 
+			ISLPRSN_SN = #{ISLPRSN_SN}::NUMERIC::NUMERIC
+		AND 
+			STTUS_REGIST_DT = #{STTUS_REGIST_DT}
+		AND 
+			ISLPRSN_STTUS_CODE = #{ISLPRSN_STTUS_CODE}
+		AND 
+			MNGR_SN = #{MNGR_SN}::NUMERIC
+	</select>	
+		
+	<!-- Búsqueda de Encargado Oficial -->
+	<select id="selectMngr" resultType="MlMap">
+		SELECT
+			MNGR_SN,
+			LOGIN_ID,
+			MNGR_NM,
+			MBTLNUM,
+			OFFM_TELNO,
+			PSITN_DPRTMNT_CODE,
+			PSITN_PRVNCA_CODE,
+			PSITN_DSTRT_CODE,
+			PSITN_DEPT_NM,
+			SKYPE_ID,
+			WHATSUP_ID
+		FROM
+			TISL_MNGR
+		WHERE
+			DELETE_AT  = 'N'
+		AND 
+			MNGR_SN = #{MNGR_SN}::NUMERIC
+		<if test='MNGR_LOGIN_ID != null and MNGR_LOGIN_ID !="" ' >
+		AND
+			LOGIN_ID = #{LOGIN_ID}
+		</if>
+	</select>
+		
+		
+		<!-- Cambiar Encargado Oficial de la persona en autocuarentena -->
+		<update id='replaceMngr'>
+			UPDATE 
+				TISL_ISLPRSN
+			SET
+				UPDT_DT = TO_CHAR(current_timestamp,'YYYYMMDDHH24MISS')
+				, ECSHG_MNGR_SN = #{MNGR_SN}::NUMERIC
+			WHERE
+				ISLPRSN_SN = #{ISLPRSN_SN}::NUMERIC
+		</update>
+		
+		<!-- Cambiar información de Administrador (para cambiar en detalles de información)  -->
+		<update id="updateMngrInfo">
+			UPDATE TISL_MNGR
+			SET
+			<trim suffixOverrides=",">
+				<if test="TRMNL_KND_CODE != null">TRMNL_KND_CODE=#{TRMNL_KND_CODE},</if>
+				<if test="MBTLNUM != null">MBTLNUM=#{MBTLNUM},</if>
+				UPDT_DT = TO_CHAR(current_timestamp,'YYYYMMDDHH24MISS')
+			</trim>
+			WHERE 1=1
+			AND MNGR_SN = #{MNGR_SN}::NUMERIC
+			<if test="MBTLNUM != null">AND MBTLNUM=#{PRE_MBTLNUM}</if>
+		</update>
+		
+		<!-- Inicio y cierre de sesión del administrador -->
+		<update id="updateMngrLoginAt">
+			UPDATE 
+				TISL_MNGR
+			SET
+				LOGIN_AT = #{LOGIN_AT}
+			WHERE 1=1
+			AND MNGR_SN = #{MNGR_SN}::NUMERIC
+			AND LOGIN_ID = #{LOGIN_ID}
+		</update>
+		
+		
+		
+		
+		<select id="selectUserHash" resultType="String">
+		SELECT ENCPT_DECD_KEY
+		FROM TISL_MNGR
+		WHERE MNGR_INNB = #{peruoname}::TEXT
+		</select>
+		
+		
+		<select id="selectUserHashSn" resultType="String">
+			SELECT MNGR_SN
+			FROM TISL_MNGR
+			WHERE 1=1
+		<choose>
+			<when test="ECSHG_MNGR_SN != null and ECSHG_MNGR_SN !='' ">
+			AND MNGR_INNB = #{ECSHG_MNGR_SN}
+			</when>
+			<otherwise>
+			AND MNGR_INNB = #{MNGR_SN}
+			</otherwise>
+		</choose>
+		</select>
+		
+		
+		
+		
+		<!-- 2020-06-15 -->
+		<update id="updateHashAndPrivateKey">
+		UPDATE 
+			TISL_MNGR
+		SET  
+			MNGR_INNB = #{MNGR_INNB}
+			,ENCPT_DECD_KEY = #{ENCPT_DECD_KEY} 
+		WHERE MNGR_SN = #{MNGR_SN}::NUMERIC
+		</update>
+		
+		
+		
+		
+		
+		
+		
+</mapper>

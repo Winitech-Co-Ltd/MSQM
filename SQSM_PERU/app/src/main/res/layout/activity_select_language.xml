@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SelectLanguageActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/abl_lang"
+        style="@style/Toolbar_Title">
+
+        <TextView
+            style="@style/Toolbar_TextView"
+            android:text="@string/select_language" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tv_lang_english"
+        style="@style/SelectLang.TextView"
+        android:text="@string/please_select_a_language"/>
+
+    <View
+        android:id="@+id/view_lang_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:background="@color/colorBlack"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_select_espanol"
+                style="@style/SelectLang.Select"
+                android:text="Español"/>
+
+            <TextView
+                android:id="@+id/tv_select_english"
+                style="@style/SelectLang.Select"
+                android:text="English"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

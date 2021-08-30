@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">    
+
+<mapper namespace="PERU_CODE">
+	
+		<!-- Código de género -->
+		<select id="selectSexdstnCodeList" resultType="MlMap" >
+		SELECT CODE
+			   ,CODE_NM
+		FROM TCM_CODE
+		WHERE UPPER_CODE = '001'
+		AND USE_AT= 'Y'
+		ORDER BY CODE 
+		</select>
+		
+		<!-- Código de Región  -->
+		<select id="selectSidoCdList" resultType="MlMap" >
+		SELECT '' AS CODE
+			  , '전체' AS CODE_NM
+		UNION ALL
+		SELECT A1.* FROM(
+		SELECT 
+		       tl1.dprtmnt_code AS CODE,
+		       <choose>
+					<when test="USE_LANG != null and USE_LANG !='' ">
+					CASE WHEN #{USE_LANG} = 'en' THEN tl1.adres_code_nm
+		            WHEN #{USE_LANG} = 'zh' THEN tl1.adres_code_nm
+		            ELSE tl1.ADRES_CODE_NM END AS CODE_NM
+		            </when>
+		            <otherwise>
+		            tl1.ADRES_CODE_NM AS CODE_NM
+		            </otherwise>
+		        </choose>
+		FROM TCM_ADRES tl1
+		WHERE 1=1
+		and prvnca_code = '00'
+		and dstrt_code = '00'
+		AND USE_AT = 'Y'
+		ORDER BY code_nm
+		) A1
+		</select>
+		
+		<!-- Código de Provincia -->
+		<select id="selectSggCdList" resultType="MlMap" >
+		SELECT '' AS CODE
+			  , '전체' AS CODE_NM
+		UNION ALL
+		SELECT A1.* FROM(
+		SELECT 
+		       tl1.prvnca_code AS CODE,
+		       <choose>
+					<when test="USE_LANG != null and USE_LANG !='' ">
+					CASE WHEN #{USE_LANG} = 'en' THEN tl1.adres_code_nm
+		                 WHEN #{USE_LANG} = 'zh' THEN tl1.adres_code_nm
+		            ELSE tl1.ADRES_CODE_NM END AS CODE_NM
+		            </when>
+		            <otherwise>
+		            tl1.ADRES_CODE_NM AS CODE_NM
+		            </otherwise>
+		        </choose>
+		FROM TCM_ADRES tl1
+		WHERE 1=1
+		AND dprtmnt_code = #{DPRTMNT_CODE}
+		AND prvnca_code NOT IN ('00')
+		AND dstrt_code = '00'
+		AND USE_AT = 'Y'
+		ORDER BY CODE_nm
+		) A1
+		</select>
+		
+		
+		<!-- Código de Distrito  -->
+		<select id="selectDstrtCdList" resultType="MlMap" >
+			SELECT '' AS CODE
+				  , '전체' AS CODE_NM
+			UNION ALL
+			SELECT A1.* FROM(
+			SELECT 
+			       tl1.dstrt_code AS CODE,
+			       <choose>
+						<when test="USE_LANG != null and USE_LANG !='' ">
+						CASE WHEN #{USE_LANG} = 'en' THEN tl1.adres_code_nm
+			                 WHEN #{USE_LANG} = 'zh' THEN tl1.adres_code_nm
+			            ELSE tl1.ADRES_CODE_NM END AS CODE_NM
+			            </when>
+			            <otherwise>
+			            tl1.ADRES_CODE_NM AS CODE_NM
+			            </otherwise>
+			        </choose>
+			FROM TCM_ADRES tl1
+			WHERE 1=1
+			AND dprtmnt_code = #{DPRTMNT_CODE}
+			AND prvnca_code = #{PRVNCA_CODE}
+			AND dstrt_code NOT IN ('00')
+			AND USE_AT = 'Y'
+			ORDER BY CODE_nm
+			) A1
+		</select>
+			
+		
+		<!-- Código de estado de la persona en cuarentena -->
+		<select id="selectSttusCodeList" resultType="MlMap" >
+		SELECT CODE
+			   ,CODE_NM
+		FROM TCM_CODE
+		WHERE UPPER_CODE = '003'
+		/*AND CODE NOT IN ('00301')*/
+		AND USE_AT= 'Y'
+		ORDER BY CODE 
+		</select>
+		
+		<!-- Código de clasifficación de cuarentena -->
+		<select id="selectIslSeCodeList" resultType="MlMap" >
+		SELECT CODE
+			   ,CODE_NM
+		FROM TCM_CODE tc
+		WHERE 1=1
+		<choose> 
+		<when test=" UPPER_CODE !=null and UPPER_CODE !='' ">
+		AND UPPER_CODE = #{UPPER_CODE}
+		</when>
+		<otherwise>
+		AND UPPER_CODE = '010'
+		</otherwise>
+		</choose>
+		AND USE_AT= 'Y'
+		ORDER BY CODE
+		</select>
+</mapper>

@@ -1,0 +1,148 @@
+/*
+  locale.strings
+  SQSMO_IOS
+
+  Created by wini on 2020/04/14.
+  Copyright © 2020 wini. All rights reserved.
+*/
+
+//commFunction
+"Need update" = "업데이트 필요";
+"Please update to the latest version. Press OK to go to the download page." = "최신버전으로 업데이트 해주세요. 확인을 누르시면 다운로드 페이지로 이동합니다.";
+
+//commExtension
+"Not a valid JSON" = "Not a valid JSON";
+
+//IntroViewController
+"Permit authorization" = "권한허용";
+"Configuration in the system to receive quarantine status alarms -> Authorization to receive notification of the App." = "자가격리자 상태 알람을 받기위하여 시스템의 설정 -> 알림에서 자가격리 안전보호 담당자앱의 알림 권한을 허용해주세요";
+"Confirm" = "확인";
+"Requires permission" = "권한필요";
+"Settings -> Authorize App Notifications permission." = "설정 -> 알림에서 앱의 위치 권한을 허용해 주세요";
+
+
+//LoginViewController
+"Ex: Juan Manuel Gonzalez Perez" = "예) 홍길동";
+"Ex: ABCD12" = "예) ABCD12";
+"Ex: 994123456" = "예) 01022331122";
+"login" = "로그인";
+"Enter all initial information" = "입력값을 다 입력 해 주세요";
+"Login failed" = "로그인실패";
+"Communication and server network is not fluid" = "서버와 통신이 원활하지 않습니다";
+"Account information does not match" = "계정정보 불일치";
+"There is no session information" = "로그인정보가 없습니다";
+"Communication failure" = "통신실패";
+"Communication and server network is not fluid." = "서버와의 통신이 원활하지 않습니다.";
+"There is no information." = "정보가 없습니다";
+
+
+//MainViewController
+"Close" = "닫기";
+"Name" = "이름";
+"Self-diagnosis\n(Morning/Afternoon)" = "자가진단서\n(오전 / 오후)";
+"Quarantine\narea" = "격리지역\n이탈여부";
+"Do not use" = "사용안함";
+"No information" = "정보없음";
+"There is no information on the selected quarantine." = "선택하신 자가격리자의 정보가 없습니다.";
+"log out" = "로그아웃";
+"Do you want to log out?" = "로그아웃 하시겠습니까?";
+"Registration failed" = "등록실패";
+"After selecting the status, click Apply button" = "상태를 선택 후 적용버튼을 눌러주세요";
+"Change failed" = "변경실패";
+"Communication and server network is not fluid." = "서버와 통신이 원활하지 않습니다.";
+"Change quarantine status failed." = "격리자 상태변경에 실패하였습니다.";
+"Change completed" = "변경완료";
+"Status of quarantine has changed." = "격리자 상태를 변경하였습니다.";
+"Search failed" = "조회실패";
+"Self-diagnosis search failed." = "자가검진자 목록조회 실패";
+"Search result" = "조회결과";
+"There is no self-diagnosis list." = "자가검진자 목록이 없습니다.";
+"  Self-quarantine numbers: " = "  자가격리자수 : ";
+"Information query failed." = "정보조회에 실패하였습니다";
+"Manager ID" = "전담공무원ID";
+"Call No." = "핸드폰";
+"Skype" = "Skype";
+"WhatsUp" = "WhatsUp";
+"Self-quarantine management list" = "자가격리자 관리 목록";
+"Jurisdiction information query failed." = "시도 정보조회에 실패하였습니다";
+"There is no jurisdiction information." = "시도정보가 없습니다";
+"Jurisdiction information query failed." = "시군구 정보조회에 실패하였습니다";
+"There is no jurisdiction information." = "시군구정보가 없습니다";
+"Select" = "선택하세요";
+"Make call" = "전화걸기";
+"Select the number to call." = "연결하실 번호를 선택하세요";
+"Contact (tutor)" = "연락처(보호자)";
+"Change status" = "상태변경";
+"Status list search failed." = "상태목록 조회에 실패하였습니다";
+"There is no status list." = "상태목록정보가 없습니다";
+"Change status of " = "상태변경";
+"Select a status \nCurrent status: " = "상태를선택하세요\n현재상태 : ";
+"Apply" = "적용";
+"Close" = "닫기";
+"Change designated manager" = "전담공무원 변경";
+" The official manager of " = "변경대상 : ";
+" has changed." = " 님의 전담공무원";
+"Search official manager" = "공무원조회";
+"No entry" = "입력없음";
+"Enter the official manager ID." = "전담공무원 ID 입력이 필요합니다.";
+"Search of manager information failed." = "전담관리자 정보조회에 실패하였습니다";
+"No official manager information." = "전담관리자정보가 없습니다";
+"Institution : " = "소속 : ";
+"Change of manager" = "공무원변경";
+"Search again" = "재조회";
+"Cancle" = "취소";
+"Manager ID" = "전담공무원 ID";
+"Enter manager ID" = "전담공무원 ID 입력";
+"View diagnostic results" = "진단결과보기";
+"Make call" = "전화걸기";
+"Change quarantine status" = "격리자 상태변경";
+"View location of quarantine" = "격리위치 보기";
+"Change of manager" = "전담공무원 변경";
+"Close" = "닫기";
+"\nAddress : " = "\n주소 : ";
+"Address" = "주소";
+"Change of official manager failed." = "전담공무원 변경에 실패하였습니다.";
+"There is no information." = "정보가 없습니다";
+"version : " = "version : ";
+"log out fail" = "로그아웃실패";
+"Copied to the clipboard." = "클립보드에 복사되었습니다.";
+"Copy location information" = "위치정보복사";
+
+//MapViewController
+"Enter address" = "상세주소입력";
+"Enter a detailed address (optional)" = "상세주소를 입력해주세요(선택)";
+"Designated quarantine location is required." = "격리위치 지정필요";
+"Location of the official manager is displayed because it does not have an quarantine location. \nReturn to the map to relocate the quarantined location and click change location button." = "자가격리자 격리위치가 없어 담당공무원 격리위치로 출력됩니다.\n지도를 이동하여 자가격리위치를 지정 후 위치수정 버튼을 클릭 해 주세요";
+"Quarantine location" = "격리위치";
+"Location of the Quarantine" = "자가격리위치";
+"Current location of quarantine" = "현재 자가격리자 위치";
+"Location change failed" = "위치변경실패";
+"Check the network status or enable WiFi and try changing the location again." = "네트워크 상태를 확인 또는 WiFi를 켜신 후 위치변경을 다시 시도해 주세요";
+"Change" = "수정";
+"Location could not be changed." = "위치변경에 실패하였습니다.";
+"Location change failed" = "변경실패";
+"Location could not be changed." = "자가격리자 위치변경에 실패하였습니다.";
+"Successful registration" = "등록성공";
+"Location of the quarantine has changed." = "자가격리자 위치를 변경하였습니다.";
+"Enter your address." = "상세 주소를 입력하세요.";
+
+//CheckListViewController
+"Self-diagnosis results" = "자가진단결과 목록";
+"No information" = "정보없음";
+"There is no information on the selected quarantine. " = "선택하신 진단목록의 정보가 없습니다.";
+"List search failed." = "목록조회에 실패하였습니다";
+"Search history" = "이력조회";
+"There is no history." = "이력이 없습니다.";
+
+//UserViewController
+"YES" = "예";
+"NO" = "아니오";
+"Diagnostic time:" = "점검시간 : ";
+"Fever (over 37.5 ℃) or feeling warm" = "발열 (37.5도 이상) 또는 발열감";
+"Body temperature :" = "체온 :";
+"Cough" = "기침";
+"Sore throat" = "인후통 (목아픔)";
+"Dyspnea (shortness of breath)" = "호흡곤란 (숨가쁨)";
+" Observations" = "특이사항";
+
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layerType="software"
+            android:layout_weight="5"
+            android:layout_margin="20dp"
+            android:src="@drawable/dash_line" />
+
+        <TextView
+            android:id="@+id/tv_header_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19 - 02 - 2020"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layerType="software"
+            android:layout_weight="5"
+            android:layout_margin="20dp"
+            android:src="@drawable/dash_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:src="@drawable/ic_arrow_down"/>
+
+        <!--<View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorBlack" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="5"
+         />-->
+
+    </LinearLayout>
+</LinearLayout>

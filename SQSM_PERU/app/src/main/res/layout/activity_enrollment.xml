@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.EnrollmentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar_Title"
+            android:theme="@style/Toolbar_Title"></androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/tv_toolbar_title"
+            style="@style/Toolbar_TextView"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/self_check_enrollment_title">
+
+            <requestFocus />
+        </TextView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_enroll_name"
+                style="@style/Enroll.TextView"
+                android:text="@string/name" />
+
+            <EditText
+                android:id="@+id/et_enroll_name"
+                style="@style/Enroll.EditText"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/name_put"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tv_birth"
+                style="@style/Enroll.EditText"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/birth_ex"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tv_enroll_gender"
+                style="@style/Enroll.TextView"
+                android:text="@string/gender" />
+
+            <RadioGroup
+                android:id="@+id/rg_enroll_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:id="@+id/rb_enroll_man"
+                    style="@style/Enroll.Toggle"
+                    android:background="@drawable/selector_left"
+                    android:textOff="@string/man"
+                    android:textOn="@string/man" />
+
+                <ToggleButton
+                    android:id="@+id/rb_enroll_woman"
+                    style="@style/Enroll.Toggle"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/selector_right"
+                    android:textOff="@string/woman"
+                    android:textOn="@string/woman" />
+
+                <ToggleButton
+                    style="@style/Enroll.Toggle"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/selector_right"
+                    android:visibility="invisible" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_id"
+                style="@style/Enroll.TextView"
+                android:text="@string/id_text" />
+
+            <EditText
+                android:id="@+id/et_id"
+                style="@style/Enroll.EditText"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="@string/id_hint"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tv_pass_port"
+                style="@style/Enroll.TextView"
+                android:layout_marginTop="8dp"
+                android:text="@string/pass_port"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_pass_port"
+                style="@style/Enroll.EditText"
+                android:ems="10"
+                android:hint="@string/pass_prot_ex"
+                android:inputType="textPersonName"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_enroll_nation"
+                style="@style/Enroll.TextView"
+                android:text="@string/national" />
+
+            <TextView
+                android:id="@+id/tv_enroll_national"
+                style="@style/Enroll.EditDisable" />
+
+            <TextView
+                android:id="@+id/tv_enroll_tel"
+                style="@style/Enroll.TextView"
+                android:layout_marginTop="8dp"
+                android:text="@string/tel" />
+
+            <EditText
+                android:id="@+id/et_enroll_tel"
+                style="@style/Enroll.EditDisable"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="@string/write_phone"
+                android:inputType="phone"
+                android:maxLength="15" />
+
+
+            <TextView
+                android:id="@+id/tv_enroll_emerTel"
+                style="@style/Enroll.TextView"
+                android:text="@string/emergency_phone" />
+
+            <EditText
+                android:id="@+id/et_enroll_emerTel"
+                style="@style/Enroll.EditText"
+                android:ems="10"
+                android:hint="@string/write_phone"
+                android:inputType="phone"
+                android:maxLength="15" />
+
+
+            <TextView
+                android:id="@+id/tv_enroll_location"
+                style="@style/Enroll.TextView"
+                android:layout_marginTop="8dp"
+                android:text="@string/quarantine_addr" />
+
+            <Button
+                android:id="@+id/bt_sido"
+                style="@style/Enroll.EditText"
+                android:drawableRight="@drawable/selector_arrow_under"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/region"
+                android:inputType="textPersonName"
+                android:paddingEnd="5dp" />
+
+            <Button
+                android:id="@+id/bt_sigungu"
+                style="@style/Enroll.EditText"
+                android:layout_marginEnd="10dp"
+                android:drawableRight="@drawable/selector_arrow_under"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/provincia"
+                android:inputType="textPersonName"
+                android:paddingEnd="5dp" />
+
+            <Button
+                android:id="@+id/bt_dong"
+                style="@style/Enroll.EditText"
+                android:drawableRight="@drawable/selector_arrow_under"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/distrito"
+                android:inputType="textPersonName"
+                android:paddingEnd="5dp" />
+
+            <TextView
+                android:id="@+id/tv_full_addr"
+                style="@style/Enroll.EditDisable"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_enroll_newLocation"
+                style="@style/Enroll.EditText"
+                android:layout_height="60dp"
+                android:hint="@string/enroll_addr_etc"
+                android:maxLength="250" />
+
+            <TextView
+                android:id="@+id/tv_enroll_locationSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/colorRed"
+                android:text="@string/location_save_success"
+                android:textSize="@dimen/default_text_size"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/bt_add_enroll_location"
+                style="@style/Enroll.EditText"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_border"
+                android:gravity="center"
+                android:maxWidth="120dp"
+                android:text="@string/check_location"
+                android:textSize="@dimen/default_text_size" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_enroll_regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/bg_button"
+        android:text="@string/regist"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/default_text_size" />
+</LinearLayout>
+

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">    
+
+<mapper namespace="PERU_PUSH">
+		
+		<!-- db에 넣기 -->
+		<insert id="insertPushTrnsmisHist_client">
+		INSERT INTO TISL_PUSH_TRNSMIS_HIST
+		(
+			PUSH_TRNSMIS_SN
+			,TRNSMIS_RESULT_CODE
+			,TRNSMIS_RESULT_CN
+			,TRNSMIS_DT
+			,REGIST_DT
+			,MESSAGE_ID
+			,TRMNL_SN
+			,ISLPRSN_SN
+		)
+		VALUES
+        (
+        	NEXTVAL('SEQ_TISL_PUSH_TRNSMIS_HIST_PK')
+        	,'01404'
+			,'not insert server'
+			,TO_CHAR(CURRENT_TIMESTAMP,'YYYYMMDDHH24MISS')
+			,TO_CHAR(CURRENT_TIMESTAMP,'YYYYMMDDHH24MISS')
+        	,#{MESSAGEID}
+			,#{TRMNL_SN}::NUMERIC
+			,#{ISLPRSN_SN}::NUMERIC
+		)
+		</insert>
+		
+		
+		<!-- message id 랑 매핑해서 격리자의 마지막 접속정보 풀어주기 -->
+		<update id="updatePushResponse">
+			UPDATE 
+				TISL_PUSH_TRNSMIS_HIST
+			SET 
+				TRNSMIS_RESULT_CODE = '01403'
+			WHERE 
+				MESSAGE_ID = #{MESSAGEID}
+		</update>
+		
+		<select id="selectPushMsg" resultType="MlMap">
+		SELECT 
+			A.MNGR_SN
+			,A.TRMNL_SN
+			,A.ISLPRSN_SN
+			,A.MESSAGE_ID
+		FROM 
+			TISL_PUSH_TRNSMIS_HIST A, 
+			TISL_TRMNL B
+		WHERE 
+			A.MESSAGE_ID = #{MESSAGEID}
+			AND A.TRMNL_SN IS NOT NULL
+			AND A.TRMNL_SN = B.TRMNL_SN
+		</select>
+		
+		
+		<update id="updateTrmnlLastCommAck">
+		    UPDATE 
+				TISL_TRMNL
+			SET
+				LAST_COMM_DT = TO_CHAR(CURRENT_TIMESTAMP,'YYYYMMDDHH24MISS')
+			WHERE 
+				ISLPRSN_SN = #{ISLPRSN_SN}::NUMERIC
+				AND TRMNL_SN = #{TRMNL_SN}::NUMERIC
+		</update>
+		
+	
+</mapper>

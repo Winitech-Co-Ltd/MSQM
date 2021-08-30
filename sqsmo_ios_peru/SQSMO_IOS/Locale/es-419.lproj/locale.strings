@@ -1,0 +1,164 @@
+/*
+  locale.strings
+  SQSMO_IOS
+
+  Created by wini on 2020/04/14.
+  Copyright © 2020 wini. All rights reserved.
+*/
+
+//commFunction
+"Need update" = "Necesita actualización";
+"Please update to the latest version. Press OK to go to the download page." = "Por favor, actualice a la última versión. Presione OK para ir a la página de descarga.";
+
+//commExtension
+"Not a valid JSON" = "No es un JSON válido";
+
+
+//IntroViewController
+"Permit authorization" = "Autorización de permiso";
+"Configuration in the system to receive quarantine status alarms -> Authorization to receive notification of the App." = "Configuación en el sistema para recibir alarmas de estado de la cuarentena -> Autorización para recibir noticiaciones de la App.";
+"Confirm" = "Confirmar";
+"Requires permission" = "Requiere permiso";
+"Settings -> Authorize App Notifications permission." = "Configuración -> Autorice permiso de notificaciones de la App.";
+
+
+//LoginViewController
+"Ex: Juan Manuel Gonzalez Perez" = "Ej: Juan Manuel Gonzalez Perez";
+"Ex: ABCD12" = "Ej: ABCD12";
+"Ex: 994123456" = "Ej: 994123456";
+"login" = "Iniciar sesión";
+"Enter all initial information" = "Introduzca toda la información inicial";
+"Login failed" = "Falló inicio de sesión";
+"Communication and server network is not fluid" = "La red de comunicación y servidor no es fluida.";
+"Account information does not match" = "No coincide información de cuenta";
+"There is no session information" = "No existe información de sesión.";
+"Communication failure" = "Fallo de comunicación";
+"Communication and server network is not fluid." = "La red de comunicación y servidor no es fluida.";
+"There is no information." = "No hay informacion.";
+
+
+//MainViewController
+"Name" = "Nombre";
+"Self-diagnosis\n(Morning/Afternoon)" = "Resultado de autodiagnóstico\n(Mañana / Tarde)";
+"Quarantine\narea" = "Área de cuarentena";
+"Do not use" = "No utilizar";
+"No information" = "Sin información";
+"There is no information on the selected quarantine." = "No hay información de la cuarentena seleccionada.";
+"log out" = "Cerrar sesión";
+"Do you want to log out?" = "Desea cerrar sesión?";
+"Registration failed" = "Falló registro";
+"After selecting the status, click Apply button" = "Después de seleccionar el estado, haga clic en el botón Aplicar";
+"Change failed" = "Falló cambio";
+"Communication and server network is not fluid." = "La red de comunicación y servidor no es fluida.";
+"Change quarantine status failed." = "Cambio de estado de cuarentena falló.";
+"Change completed" = "Cambio completado";
+"Status of quarantine has changed." = "El estado de cuarentena ha cambiado.";
+"Search failed" = "Falló búsqueda";
+"Self-diagnosis search failed." = "Falló búsqueda de autodiagnóstico. ";
+"Search result" = "Resultado de busqueda";
+"There is no self-diagnosis list." = "No hay lista de autodiagnóstico. ";
+"  Self-quarantine numbers: " = "  Números en cuarentena: ";
+"Information query failed." = "Falló consulta de información.";
+"Manager ID" = "ID Encargado";
+"Call No." = "No. de Celular";
+"Skype" = "Skype";
+"WhatsUp" = "WhatsUp";
+"Self-quarantine management list" = "Lista de gestión de auto cuarentena";
+"Jurisdiction information query failed." = "Falló consulta de información de jurisdicción.";
+"There is no jurisdiction information." = "No hay información de jurisdicción.";
+"Jurisdiction information query failed." = "Falló consulta de información de jurisdicción.";
+"There is no jurisdiction information." = "No hay información de jurisdicción.";
+"Select" = "Seleccione";
+"Make call" = "Llamar";
+"Select the number to call." = "Seleccione el número a llamar.";
+"Contact (tutor)" = "Contacto(tutor)";
+"Change status" = "Cambio de estado";
+"Status list search failed." = "Falló búsqueda de lista de estado.";
+"There is no status list." = "No hay lista de estado.";
+"Change status of " = "Cambia de estado de ";
+"Select a status \nCurrent status: " = "Seleccione un estado \nEstado actual: ";
+"Apply" = "Aplicar";
+"Close" = "Cerrar";
+"Change designated manager" = "Cambiar encargado oficial";
+" The official manager of " = "Encargado oficial de ";
+" has changed." = " Ha cambiado el.";
+"Search official manager" = "Buscar encargado oficial";
+"No entry" = "Sin entrada";
+"Enter the official manager ID." = "Necesita ingresar el ID del encargado oficial.";
+"Search of manager information failed." = "Falló consulta de información de encargado.";
+"No official manager information." = "No hay información de encargado oficial.";
+"Institution : " = "Insitución : ";
+"Change of manager" = "Cambio de encargado";
+"Search again" = "Volver a buscar";
+"Cancle" = "Cancelar";
+"Manager ID" = "ID Encargado";
+"Enter manager ID" = "Introducir ID encargado";
+"View diagnostic results" = "Ver resultados de diagnóstico";
+"Make call" = "Llamar";
+"Change quarantine status" = "Cambiar estado de la cuarentena";
+"View location of quarantine" = "Ver ubicación de la cuarentena";
+"Change of manager" = "Cambiar encargado designado";
+"\nAddress : " = "\nDirección: ";
+"Address" = "Dirección";
+"Change of official manager failed." = "Falló cambio de encargado oficial.";
+"There is no information." = "No hay informacion.";
+"version : " = "Versión : ";
+"log out fail" = "Falló Cerrar sesión";
+"Successful registration" = "Registro exitoso";
+"Copied to the clipboard." = "Se ha copiado en el clipboard";
+"Copy location information" = "Copiar información de ubicación";
+
+//MapViewController
+"Enter address" = "Introducir dirección";
+"Enter a detailed address (optional)" = "Introduzca una dirección detallada (opcional)";
+"Designated quarantine location is required." = "Se requiere designar ubicación de cuarentena.";
+"Location of the official manager is displayed because it does not have an quarantine location. \nReturn to the map to relocate the quarantined location and click change location button." = "Se visualiza la ubicación del encargado oficial por no contar con ubicación de la cuarentena. \nVuelva al mapa para reubicar el lugar en cuarentena y haga click botón cambiar ubicación.";
+"Quarantine location" = "Lugar de cuarentena";
+"Location of the Quarantine" = "Ubicación de la cuarentena";
+"Current location of quarantine" = "Ubicación actual de la cuarentena";
+"Location change failed" = "Falló cambio de ubicación";
+"Check the network status or enable WiFi and try changing the location again." = "Verifique el estado de la red o active WiFi e intente cambiar la ubicación nuevamente.";
+"Change" = "Cambiar";
+"Location could not be changed." = "No se pudo cambiar la ubicación.";
+"Location change failed" = "Falló cambio";
+"Location could not be changed." = "Error al cambiar la ubicación de cuarentena";
+"Successful registration" = "Registro exitoso";
+"Location of the quarantine has changed." = "Cambió ubicación de cuarentena";
+"Enter your address." = "Introduzca su dirección.";
+"Move the map and press the desired location for more than a second." = "Mueva el mapa y presione la ubicación deseada por más de un segundo.";
+"Gobierno Regional" = "Regional Government";
+"Gobierno Provincial" = "Provincial Government";
+"Gobierno Distrital" = "District Government";
+"Falló búsqueda de la Región." = "Falló búsqueda de la Región.";
+"No hay lista de la Región." = "No hay lista de la Región.";
+"Falló búsqueda de la Provincia." = "Falló búsqueda de la Provincia.";
+"No hay lista de la Provincia." = "No hay lista de la Provincia.";
+"Falló búsqueda del Distrito." = "Falló búsqueda del Distrito.";
+"No hay lista del Distrito." = "No hay lista del Distrito.";
+"Seleccionar Región" = "Seleccionar Región";
+"Seleccionar Provincia" = "Seleccionar Provincia";
+"Seleccionar Distrito" = "Seleccionar Distrito";
+"Seleccione su región, provincia y distrito." = "Seleccione su región, provincia y distrito.";
+"Necesita cambiar" = "Necesita cambiar";
+"Por favor seleccione." = "Por favor seleccione.";
+
+//CheckListViewController
+"Self-diagnosis results" = "Resultados de autodiagnóstico";
+"No information" = "Sin información";
+"There is no information on the selected quarantine. " = "No hay información en la lista de diagnóstico seleccionada.";
+"List search failed." = "Falló búsqueda de lista. ";
+"Search history" = "Buscar historial";
+"There is no history." = "No hay historial.";
+
+//UserViewController
+"YES" = "Si";
+"NO" = "No";
+"Diagnostic time:" = "Hora de diagnótico: ";
+" Fever (over 37.5 ℃) or feeling warm" = " Fiebre (más de 37.5 ℃) o sensación de calor";
+"Body temperature :" = "Temperatura corporal:";
+" Cough" = " Tos";
+" Sore throat" = " Dolor de garganta";
+" Dyspnea (shortness of breath)" = " Disnea (dificultad para respirar)";
+" Observations" = " Observaciones";
+
+

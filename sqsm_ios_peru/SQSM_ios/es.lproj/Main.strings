@@ -1,0 +1,210 @@
+
+/* Class = "UILabel"; text = "ID Ciudadano"; ObjectID = "32Q-K3-W2Y"; */
+"32Q-K3-W2Y.text" = "ID Ciudadano";
+
+/* Class = "UILabel"; text = "Número de pasaporte"; ObjectID = "4wI-fW-afA"; */
+"4wI-fW-afA.text" = "Número de pasaporte";
+
+/* Class = "UITextField"; placeholder = "Ej: 994123456"; ObjectID = "5mz-b1-PR4"; */
+"5mz-b1-PR4.placeholder" = "Ej: 994123456";
+
+/* Class = "UILabel"; text = "dirección en cuarentena"; ObjectID = "5og-ep-5pN"; */
+"5og-ep-5pN.text" = "dirección en cuarentena";
+
+/* Class = "UIButton"; normalTitle = "Ver más"; ObjectID = "65i-oi-Ynq"; */
+"65i-oi-Ynq.normalTitle" = "Ver más";
+
+/* Class = "UITextField"; placeholder = "Ej: 994123456"; ObjectID = "694-c7-yjA"; */
+"694-c7-yjA.placeholder" = "Ej: 994123456";
+
+/* Class = "UIButton"; normalTitle = "EDITAR\nINFORMACIÓN "; ObjectID = "7l5-jK-UF2"; */
+"7l5-jK-UF2.normalTitle" = "EDITAR\nINFORMACIÓN ";
+
+/* Class = "UIButton"; normalTitle = "LISTA DE\nAUTODIAGNÓSTICO"; ObjectID = "7ll-zX-2P5"; */
+"7ll-zX-2P5.normalTitle" = "LISTA DE\nAUTODIAGNÓSTICO";
+
+/* Class = "UILabel"; text = "Nacionalidad"; ObjectID = "8ct-80-Rna"; */
+"8ct-80-Rna.text" = "Nacionalidad";
+
+/* Class = "UILabel"; text = "Nombre/Fecha de nacimiento"; ObjectID = "8tE-rm-qEV"; */
+"8tE-rm-qEV.text" = "Nombre/Fecha de nacimiento";
+
+/* Class = "UINavigationItem"; title = "Registrar información"; ObjectID = "BEN-gc-yOj"; */
+"BEN-gc-yOj.title" = "Registrar información";
+
+/* Class = "UISegmentedControl"; BEy-HM-XNm.segmentTitles[0] = "PERU"; ObjectID = "BEy-HM-XNm"; */
+"BEy-HM-XNm.segmentTitles[0]" = "PERU";
+
+/* Class = "UISegmentedControl"; BEy-HM-XNm.segmentTitles[1] = "OTROS PAISES"; ObjectID = "BEy-HM-XNm"; */
+"BEy-HM-XNm.segmentTitles[1]" = "OTROS PAISES";
+
+/* Class = "UILabel"; text = "Estoy de acuerdo"; ObjectID = "BLf-yr-m4c"; */
+"BLf-yr-m4c.text" = "Estoy de acuerdo";
+
+/* Class = "UINavigationItem"; title = "Buscar centro de salud cercano"; ObjectID = "C9z-uv-Ke1"; */
+"C9z-uv-Ke1.title" = "Buscar centro de salud cercano";
+
+/* Class = "UILabel"; text = "Número Celular"; ObjectID = "Dxa-DI-J8C"; */
+"Dxa-DI-J8C.text" = "Número Celular";
+
+/* Class = "UILabel"; text = "Número Celular"; ObjectID = "FOa-yh-5qU"; */
+"FOa-yh-5qU.text" = "Número Celular";
+
+/* Class = "UIButton"; normalTitle = "Ver\nubicación"; ObjectID = "Fva-yp-hzi"; */
+"Fva-yp-hzi.normalTitle" = "Ver\nubicación";
+
+/* Class = "UILabel"; text = "Nombre/Fecha de nacimiento"; ObjectID = "G7Y-y0-tKL"; */
+"G7Y-y0-tKL.text" = "Nombre/Fecha de nacimiento";
+
+/* Class = "UINavigationItem"; title = "Iniciar Autodiagnóstico\n"; ObjectID = "HSs-GD-m2e"; */
+"HSs-GD-m2e.title" = "Iniciar Autodiagnóstico\n";
+
+/* Class = "UINavigationItem"; title = "Ubicación de cuarentena"; ObjectID = "Kfp-p0-g6T"; */
+"Kfp-p0-g6T.title" = "Ubicación de cuarentena";
+
+/* Class = "UIButton"; normalTitle = "Confirmar"; ObjectID = "KzP-WT-2aI"; */
+"KzP-WT-2aI.normalTitle" = "Confirmar";
+
+/* Class = "UITextField"; placeholder = "Por favor, introduzca su dirección"; ObjectID = "LRt-mB-T6r"; */
+"LRt-mB-T6r.placeholder" = "Por favor, introduzca su dirección";
+
+/* Class = "UIButton"; normalTitle = "FIN"; ObjectID = "Lg8-Vd-BGe"; */
+"Lg8-Vd-BGe.normalTitle" = "FIN";
+
+/* Class = "UITextField"; placeholder = "Introduzca ID ciudadano"; ObjectID = "NCe-Ks-kmi"; */
+"NCe-Ks-kmi.placeholder" = "Introduzca ID ciudadano";
+
+/* Class = "UITextField"; placeholder = "Seleccionar Distrito"; ObjectID = "NTH-Tw-dQ6"; */
+"NTH-Tw-dQ6.placeholder" = "Distrito";
+
+/* Class = "UISegmentedControl"; Nxs-Mk-4gi.segmentTitles[0] = "ID Ciudadano"; ObjectID = "Nxs-Mk-4gi"; */
+"Nxs-Mk-4gi.segmentTitles[0]" = "ID Ciudadano";
+
+/* Class = "UISegmentedControl"; Nxs-Mk-4gi.segmentTitles[1] = "Número de pasaporte"; ObjectID = "Nxs-Mk-4gi"; */
+"Nxs-Mk-4gi.segmentTitles[1]" = "Número de pasaporte";
+
+/* Class = "UILabel"; text = "※ La ubicación se ha guardado."; ObjectID = "Oeu-os-hoY"; */
+"Oeu-os-hoY.text" = "※ La ubicación se ha guardado.";
+
+/* Class = "UITextField"; placeholder = "Por favor ingrese su nombre"; ObjectID = "OkH-cH-fzM"; */
+"OkH-cH-fzM.placeholder" = "Por favor ingrese su nombre";
+
+/* Class = "UINavigationItem"; title = "Editar información"; ObjectID = "P8q-Eu-CU0"; */
+"P8q-Eu-CU0.title" = "Editar información";
+
+/* Class = "UILabel"; text = "Iniciar\nAutodiagnóstico"; ObjectID = "Qnd-oW-m5j"; */
+"Qnd-oW-m5j.text" = "Iniciar\nAutodiagnóstico";
+
+/* Class = "UILabel"; text = "Género"; ObjectID = "RhS-Bm-4G8"; */
+"RhS-Bm-4G8.text" = "Género";
+
+/* Class = "UILabel"; text = "Seleccione"; ObjectID = "Rrh-1u-xnf"; */
+"Rrh-1u-xnf.text" = "Seleccione";
+
+/* Class = "UISegmentedControl"; UEv-VO-iyl.segmentTitles[0] = "HOMBRE"; ObjectID = "UEv-VO-iyl"; */
+"UEv-VO-iyl.segmentTitles[0]" = "HOMBRE";
+
+/* Class = "UISegmentedControl"; UEv-VO-iyl.segmentTitles[1] = "MUJER"; ObjectID = "UEv-VO-iyl"; */
+"UEv-VO-iyl.segmentTitles[1]" = "MUJER";
+
+/* Class = "UITextField"; placeholder = "Seleccionar Provincia"; ObjectID = "VXe-Uq-jTd"; */
+"VXe-Uq-jTd.placeholder" = "Provincia";
+
+/* Class = "UITextField"; placeholder = "Ej: A11223344"; ObjectID = "Wx7-cW-68u"; */
+"Wx7-cW-68u.placeholder" = "Ej: A11223344";
+
+/* Class = "UIButton"; normalTitle = "1339"; ObjectID = "X1f-E5-XRT"; */
+"X1f-E5-XRT.normalTitle" = "107";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XrB-ko-i1O"; */
+"XrB-ko-i1O.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Seleccionar Región"; ObjectID = "ZaZ-IR-shy"; */
+"ZaZ-IR-shy.placeholder" = "Región";
+
+/* Class = "UILabel"; text = "ID Ciudadano"; ObjectID = "Zi1-wf-xWq"; */
+"Zi1-wf-xWq.text" = "ID Ciudadano";
+
+/* Class = "UILabel"; text = "Protección \nde seguridad de autocuarentena"; ObjectID = "cvw-ZK-nBc"; */
+"cvw-ZK-nBc.text" = "Protección \nde seguridad de autocuarentena";
+
+/* Class = "UILabel"; text = "Contacto (Protector/a)"; ObjectID = "d7R-2S-umJ"; */
+"d7R-2S-umJ.text" = "Contacto (Protector/a)";
+
+/* Class = "UIButton"; normalTitle = "FIN"; ObjectID = "dKV-kj-ouK"; */
+"dKV-kj-ouK.normalTitle" = "FIN";
+
+/* Class = "UINavigationItem"; title = "Lista de autodiagnóstico"; ObjectID = "eJx-oe-Bdm"; */
+"eJx-oe-Bdm.title" = "Lista de autodiagnóstico";
+
+/* Class = "UITextField"; placeholder = "Por favor ingrese su Fecha de nacimiento"; ObjectID = "gAT-Gb-shR"; */
+"gAT-Gb-shR.placeholder" = "Por favor ingrese su Fecha de nacimiento";
+
+/* Class = "UITextView"; text = "Mueva el mapa y presione la ubicación deseada por más de un segundo"; ObjectID = "h0f-aE-SdH"; */
+"h0f-aE-SdH.text" = "Mueva el mapa y presione la ubicación deseada por más de un segundo";
+
+/* Class = "UILabel"; text = "Nacionalidad"; ObjectID = "h3B-h4-Pg9"; */
+"h3B-h4-Pg9.text" = "Nacionalidad";
+
+/* Class = "UIButton"; normalTitle = "Cancelar"; ObjectID = "hJK-Ym-S0N"; */
+"hJK-Ym-S0N.normalTitle" = "Cancelar";
+
+/* Class = "UISegmentedControl"; he5-Gk-3BP.segmentTitles[0] = "HOMBRE"; ObjectID = "he5-Gk-3BP"; */
+"he5-Gk-3BP.segmentTitles[0]" = "HOMBRE";
+
+/* Class = "UISegmentedControl"; he5-Gk-3BP.segmentTitles[1] = "MUJER"; ObjectID = "he5-Gk-3BP"; */
+"he5-Gk-3BP.segmentTitles[1]" = "MUJER";
+
+/* Class = "UILabel"; text = "Número de pasaporte"; ObjectID = "jmp-aI-jRy"; */
+"jmp-aI-jRy.text" = "Número de pasaporte";
+
+/* Class = "UITextField"; placeholder = "introduzca su dirección"; ObjectID = "jqa-aO-jtb"; */
+"jqa-aO-jtb.placeholder" = "introduzca su dirección";
+
+/* Class = "UINavigationItem"; title = "Iniciar Autodiagnóstico\n"; ObjectID = "k4y-X0-agi"; */
+"k4y-X0-agi.title" = "Iniciar Autodiagnóstico\n";
+
+/* Class = "UIButton"; normalTitle = "INFORMACIÓN DEL \nOFICIAL ENCARGADO"; ObjectID = "lCf-3A-ppe"; */
+"lCf-3A-ppe.normalTitle" = "INFORMACIÓN DEL \nOFICIAL ENCARGADO";
+
+/* Class = "UIButton"; normalTitle = "Registro de coordenadas"; ObjectID = "mCG-hg-GvB"; */
+"mCG-hg-GvB.normalTitle" = "Registro de coordenadas";
+
+/* Class = "UILabel"; text = "loding"; ObjectID = "nHX-zj-bIp"; */
+"nHX-zj-bIp.text" = "loding";
+
+/* Class = "UILabel"; text = "dirección en cuarentena"; ObjectID = "naY-M1-3oj"; */
+"naY-M1-3oj.text" = "dirección en cuarentena";
+
+/* Class = "UITextField"; placeholder = "Nacionalidad"; ObjectID = "nni-Ga-mcU"; */
+"nni-Ga-mcU.placeholder" = "Nacionalidad";
+
+/* Class = "UILabel"; text = "Contacto (Protector/a)"; ObjectID = "nqZ-Lu-7xk"; */
+"nqZ-Lu-7xk.text" = "Contacto (Protector/a)";
+
+/* Class = "UILabel"; text = "Autodiagnóstico final"; ObjectID = "oK3-x8-igC"; */
+"oK3-x8-igC.text" = "Autodiagnóstico final";
+
+/* Class = "UINavigationItem"; title = "Protección de seguridad de autocuarentena"; ObjectID = "odm-XD-YHl"; */
+"odm-XD-YHl.title" = "Protección de seguridad de autocuarentena";
+
+/* Class = "UIButton"; normalTitle = "BUSCAR CENTRO \nDE SALUD"; ObjectID = "pQC-on-AO1"; */
+"pQC-on-AO1.normalTitle" = "BUSCAR CENTRO \nDE SALUD";
+
+/* Class = "UILabel"; text = "Nacionalidad"; ObjectID = "ppT-vo-Tiv"; */
+"ppT-vo-Tiv.text" = "Nacionalidad";
+
+/* Class = "UITextField"; placeholder = "seleccione Nacionalidad"; ObjectID = "sQZ-Oe-XFQ"; */
+"sQZ-Oe-XFQ.placeholder" = "seleccione Nacionalidad";
+
+/* Class = "UIViewController"; title = "환경설정"; ObjectID = "tlr-Az-2fZ"; */
+"tlr-Az-2fZ.title" = "환경설정";
+
+/* Class = "UITextField"; placeholder = "Ej: 994123456"; ObjectID = "uhY-69-X7g"; */
+"uhY-69-X7g.placeholder" = "Ej: 994123456";
+
+/* Class = "UIButton"; normalTitle = "mapa\nde Google"; ObjectID = "uxf-Ml-2lu"; */
+"uxf-Ml-2lu.normalTitle" = "mapa\nde Google";
+
+/* Class = "UILabel"; text = "Género"; ObjectID = "wZo-Cb-wyt"; */
+"wZo-Cb-wyt.text" = "Género";

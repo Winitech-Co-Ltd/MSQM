@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.GoogleMapActivity">
+    <RelativeLayout
+        android:id="@+id/rv_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar_Title"
+            android:theme="@style/Toolbar_Title"/>
+
+        <TextView
+            style="@style/Toolbar_TextView"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/google_map_title" />
+    </RelativeLayout>
+
+    <!--Map Layout-->
+    <fragment
+        android:id="@+id/google_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_tool_bar" />
+
+    <Button
+        android:id="@+id/bt_location_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_button"
+        android:padding="5dp"
+        android:minWidth="100dp"
+        android:minHeight="40dp"
+        android:text="@string/location_copy"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/google_map" />
+
+    <Button
+        android:id="@+id/bt_location_modify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="100dp"
+        android:minHeight="80dp"
+        android:layout_marginBottom="8dp"
+        android:paddingTop="10dp"
+        android:drawableTop="@drawable/ic_location_modify"
+        android:background="@drawable/bg_button"
+        android:text="@string/location_regist"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_location_close"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/bt_location_regist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="100dp"
+        android:minHeight="80dp"
+        android:layout_marginBottom="8dp"
+        android:paddingTop="10dp"
+        android:drawableTop="@drawable/ic_location_modify"
+        android:background="@drawable/bg_button"
+        android:text="@string/save_location"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="12dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/bt_location_close"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/bt_location_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="100dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_darkgray"
+        android:text="@string/cancel"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="12dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/bt_location_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="100dp"
+        android:layout_margin="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_darkgray"
+        android:text="@string/close_agree"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_location_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/google_map"
+        app:layout_constraintEnd_toEndOf="@+id/google_map"
+        app:layout_constraintStart_toStartOf="@+id/google_map"
+        app:layout_constraintTop_toTopOf="@+id/google_map"
+        app:srcCompat="@drawable/ico_pin" />
+</androidx.constraintlayout.widget.ConstraintLayout>

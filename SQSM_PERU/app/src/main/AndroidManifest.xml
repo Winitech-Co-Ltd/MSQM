@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="kr.go.sqsm.peru">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".ApplicationPERU"
+        android:allowBackup="false"
+        android:icon="@drawable/app_icon"
+        android:label="@string/application"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".activity.ScreeningClinicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EnrollmentMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BreakAwayDialog"
+            android:theme="@style/Theme.AppCompat.Dialog" /> <!-- Activity -->
+        <activity
+            android:name=".activity.DiagnosisListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SelfDiagnosisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SelectLanguageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GoogleMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EnrollmentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.ModifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AgreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.IntroActivity"
+            android:screenOrientation="portrait">
+
+            <!-- Intro -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- FCM 서비스 -->
+        <service android:name=".service.MyFireBaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- 포그라운드 서비스 -->
+        <service
+            android:name=".service.ForegroundService"
+            android:enabled="true"
+            android:foregroundServiceType="location" /> <!-- 구글맵 -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver android:name=".util.AppAutoRun"
+            android:enabled="true"
+            android:exported="false"
+            android:label="STARTReceiver">
+            <intent-filter > <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

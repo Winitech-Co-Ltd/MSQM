@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+      <setting name="callSettersOnNulls" value="true"/>
+      <setting name="jdbcTypeForNull" value="NULL"/>
+   </settings>
+
+	<typeAliases>
+		<typeAlias type="com.peru.ncov2019.ml.cmm.vo.MlMap" alias="MlMap" />
+	</typeAliases>
+
+    <mappers>
+        <mapper resource="SQL/SCM/PERU_USR.xml"></mapper>
+        <mapper resource="SQL/SCM/PERU_MNGR.xml"></mapper>
+        <mapper resource="SQL/SCM/PERU_CODE.xml"></mapper>
+        <mapper resource="SQL/SCM/PERU_PUSH.xml"></mapper>
+    </mappers>
+</configuration> 

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activity.SelfDiagnosisActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar_Title"
+            android:theme="@style/Toolbar_Title"/>
+
+        <TextView
+            style="@style/Toolbar_TextView"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/self_diagnosis" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_diagnosis_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:background="@drawable/bg_darkgray"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorWhite"
+        android:text="@string/today_symptom" />
+
+    <CheckBox
+        android:id="@+id/cb_self_not_symptom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:layout_gravity="right"
+        android:text="@string/not_sym"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--열-->
+            <TextView
+                style="@style/SelfCheck.TextView"
+                android:text="@string/temperature" />
+
+            <RadioGroup
+                android:id="@+id/rg_diag_temp"
+                style="@style/SelfCheck.RadioGroup">
+
+                <ToggleButton
+                    android:id="@+id/rb_diag_tempYes"
+                    style="@style/SelfCheck.Toggle"
+                    android:background="@drawable/selector_left"
+                    android:textOff="@string/yes"
+                    android:textOn="@string/yes" />
+
+                <ToggleButton
+                    android:id="@+id/rb_diag_tempNo"
+                    style="@style/SelfCheck.Toggle"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/selector_right"
+                    android:textOff="@string/no"
+                    android:textOn="@string/no" />
+            </RadioGroup>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp"
+                android:padding="5dp"
+                android:background="@drawable/bg_blue_dash_border"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    android:text="@string/bodyheat" />
+
+                <TextView
+                    android:id="@+id/tv_diag_bdheat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    android:text="-" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
+                    android:layout_marginStart="6dp"
+                    android:text="℃" />
+            </LinearLayout>
+
+            <!--증상1-->
+            <TextView
+                style="@style/SelfCheck.TextView"
+                android:text="@string/cough" />
+
+            <RadioGroup
+                android:id="@+id/rg_diag_cough"
+                style="@style/SelfCheck.RadioGroup">
+
+                <ToggleButton
+                    android:id="@+id/rb_diag_coughYes"
+                    style="@style/SelfCheck.Toggle"
+                    android:background="@drawable/selector_left"
+                    android:textOff="@string/yes"
+                    android:textOn="@string/yes" />
+
+                <ToggleButton
+                    android:id="@+id/rb_diag_coughNo"
+                    style="@style/SelfCheck.Toggle"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/selector_right"
+                    android:textOff="@string/no"
+                    android:textOn="@string/no" />
+            </RadioGroup>
+            <!--증상2-->
+            <TextView
+                style="@style/SelfCheck.TextView"
+                android:text="@string/sore_throat" />
+
+            <RadioGroup
+                android:id="@+id/rg_diag_sore_throat"
+                style="@style/SelfCheck.RadioGroup">
+
+                <ToggleButton
+                    android:id="@+id/rb_diag_sore_throatYes"
+                    style="@style/SelfCheck.Toggle"
+                    android:background="@drawable/selector_left"
+                    android:textOff="@string/yes"
+                    android:textOn="@string/yes" />
+
+                <ToggleButton
+                    android:id="@+id/rb_diag_sore_throatNo"
+                    style="@style/SelfCheck.Toggle"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/selector_right"
+                    android:textOff="@string/no"
+                    android:textOn="@string/no" />
+            </RadioGroup>
+            <!--증상3-->
+            <TextView
+                style="@style/SelfCheck.TextView"
+                android:text="@string/dyspnea" />
+
+            <RadioGroup
+                android:id="@+id/rg_diag_dyspnea"
+                style="@style/SelfCheck.RadioGroup">
+
+                <ToggleButton
+                    android:id="@+id/rb_diag_DyspneaYes"
+                    style="@style/SelfCheck.Toggle"
+                    android:background="@drawable/selector_left"
+                    android:textOff="@string/yes"
+                    android:textOn="@string/yes" />
+
+                <ToggleButton
+                    android:id="@+id/rb_diag_DyspneaNo"
+                    style="@style/SelfCheck.Toggle"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/selector_right"
+                    android:textOff="@string/no"
+                    android:textOn="@string/no" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/SelfCheck.TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/diag_etc" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/et_diag_etc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_blue_dash_border"
+                android:gravity="top"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:minHeight="100dp"
+                android:padding="5dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_diagnosis_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/bg_button"
+        android:textColor="@color/colorWhite"
+        android:text="@string/submit" />
+
+
+</LinearLayout>

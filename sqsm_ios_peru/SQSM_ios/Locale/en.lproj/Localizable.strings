@@ -1,0 +1,84 @@
+/* 
+  localizing.strings
+  SQSM_ios_peru
+
+  Created by 개발용 맥북 on 2020/05/15.
+  Copyright © 2020 wini. All rights reserved.
+*/
+
+//introVC
+"Consentimiento para la recopilación\n y uso de información personal e información de ubicación" = "Consent to the collection and use of personal\ninformation and location information";
+"Aceptar permiso" = "Allow authority";
+"Autorice permiso de ubicación de la App" = "Authorize App Location permission";
+"Configuación en el sistema para recibir alarmas de estado de la cuarentena -> Autorización para recibir noticiaciones de la App" = "Configuration in the system to receive quarantine status alarms -> Authorization to receive notification of the App";
+
+//agreeVC
+"Seleccionar Nacionalidad" = "Select Nationality";
+"Por favor seleccione un Nacionalidad" = "Please select a Nationality";
+
+//authVC
+"Introducir ID encargado" = "Enter manager ID";
+"Por favor, introduzca 6 dígitos." = "Enter 6 digits";
+"Guardar" = "Save";
+"Cerrar" = "Close";
+"entrada vacía o inválida" = "empty or invalid input";
+"Número de teléfono celular es equivocado." = "This is an invalid cell phone number.";
+"Número de teléfono celular del guardián es incorrecto." = "This is an invalid cell phone number of guardian.";
+"Falta o inválido la entrada" = "Missing or invalid input";
+"Seleccione su región" = "Select Regional";
+"Seleccione su provincia" = "Select Provincial";
+"escoger" = "Choose";
+"Falló búsqueda de la Región" = "Region search failed";
+"Falló búsqueda de la Provincia" = "Province search failed";
+"Falló búsqueda del Distrito" = "District search failed";
+"Escoger" = "Select";
+
+//mainVC
+"Protección de seguridad\nde autocuarentena" = "Self-quarantine Safety Protection";
+
+//cehckScrollVC
+"Seleccione los síntomas de hoy" = "Select today's symptoms";
+"Fiebre (más de 37.5 ℃) o sensación de calor" = "Fever (over 37.5 ℃) or feeling warm";
+"Temperatura :" = "temperature :";
+"Tos" = "Cough";
+"Dolor de garganta" = "Sore throat";
+"Disnea (dificultad para respirar)" = "Dyspnea (shortness of breath)";
+"Observaciones" = "Observations";
+"❖ Los resultados del autodiagnóstico y las especificaciones se enviarán al funcionario público a cargo." = "❖ Self-diagnosis results and anything specific will be sent to the public official in charge.";
+"Ingrese la temperatura de su cuerpo" = "Enter your body temperature";
+"Si" = "Yes";
+"FIN" = "End";
+"Éxito" = "Success";
+"Falló" = "Fail";
+"Registro exitoso" = "Registration successful";
+"Falló registro" = "Registration failed";
+
+//checkListVC
+"Resultados de autodiagnóstico" = "Self-diagnosis results";
+"No hay lista de autodiagnóstico" = "No self-diagnosis list";
+
+//detailVC
+"Hora de diagnótico : " = "Diagnostic time : ";
+"Confirmar" = "Confirm";
+
+//clicnicVC
+"Google\nmap" = "mapa\nde Google";
+
+//selectMapVC
+"Ubicación de cuarentena" = "Quarantine location";
+"ubicación seleccionada" = "Selected location";
+"Lugar de cuarentena" = "Quarantine place";
+"Registrar\nUbicación" = "Register\nlocation";
+
+//officialDialog
+"Información del Encargado Oficial" = "Information of public official";
+"Institución" = "Institution";
+"Nombre" = "Name";
+"Teléfono móvil" = "Mobile Phone No";
+"Teléfono de oficina" = "Office Phone No";
+"Cerrar" = "Close";
+
+//common
+"completado" = "done";
+"Error durante la comunicación del servicio. Vuelva a intentar." = "There was an error during service communication. Please try again later.";
+"Comunicación de red no es fluida. Vuelva a intentar." = "Network communication is faulty. Please try again later.";

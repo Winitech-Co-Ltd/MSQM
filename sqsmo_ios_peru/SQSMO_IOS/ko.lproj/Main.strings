@@ -1,0 +1,108 @@
+
+/* Class = "UILabel"; text = "이름"; ObjectID = "0LY-nu-IH9"; */
+"0LY-nu-IH9.text" = "이름";
+
+/* Class = "UILabel"; text = "ID"; ObjectID = "0el-Bn-4T0"; */
+"0el-Bn-4T0.text" = "ID";
+
+/* Class = "UIBarButtonItem"; title = "뒤로"; ObjectID = "1rU-Nr-vMJ"; */
+"1rU-Nr-vMJ.title" = "뒤로";
+
+/* Class = "UIBarButtonItem"; title = "My information"; ObjectID = "44C-Mh-cro"; */
+"44C-Mh-cro.title" = "나의정보";
+
+/* Class = "UINavigationItem"; title = "Current location of quarantine"; ObjectID = "5z0-0O-tIg"; */
+"5z0-0O-tIg.title" = "Current location of quarantine";
+
+/* Class = "UIButton"; normalTitle = "Update"; ObjectID = "86A-mi-gT3"; */
+"86A-mi-gT3.normalTitle" = "Update";
+
+/* Class = "UIBarButtonItem"; title = "뒤로"; ObjectID = "8wC-tt-sjJ"; */
+"8wC-tt-sjJ.title" = "뒤로";
+
+/* Class = "UITextView"; text = "격리위치 주소를 불러오고 있습니다."; ObjectID = "9N0-UX-Wbm"; */
+"9N0-UX-Wbm.text" = "격리위치 주소를 불러오고 있습니다.";
+
+/* Class = "UINavigationItem"; title = "사용자 설정"; ObjectID = "EXC-Lv-4p1"; */
+"EXC-Lv-4p1.title" = "사용자 설정";
+
+/* Class = "UILabel"; text = "LOGIN"; ObjectID = "FQf-fm-OdL"; */
+"FQf-fm-OdL.text" = "LOGIN";
+
+/* Class = "UILabel"; text = "목록이 없습니다."; ObjectID = "G9K-c1-1DS"; */
+"G9K-c1-1DS.text" = "목록이 없습니다.";
+
+/* Class = "UILabel"; text = "이탈여부"; ObjectID = "Hao-K2-zUm"; */
+"Hao-K2-zUm.text" = "이탈여부";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "I06-XA-wTx"; */
+"I06-XA-wTx.text" = "date";
+
+/* Class = "UILabel"; text = "안심밴드가 연결 되었습니다."; ObjectID = "KPV-3H-aEZ"; */
+"KPV-3H-aEZ.text" = "안심밴드가 연결 되었습니다.";
+
+/* Class = "UIButton"; normalTitle = "밴드 초기화"; ObjectID = "Mqj-Jd-c0v"; */
+"Mqj-Jd-c0v.normalTitle" = "밴드 초기화";
+
+/* Class = "UILabel"; text = "작성여부"; ObjectID = "P8z-ib-HCx"; */
+"P8z-ib-HCx.text" = "작성여부";
+
+/* Class = "UINavigationItem"; title = "Self-diagnosis results"; ObjectID = "POb-IV-6vZ"; */
+"POb-IV-6vZ.title" = "Self-diagnosis results";
+
+/* Class = "UILabel"; text = "스마트밴드명"; ObjectID = "R7b-8S-STS"; */
+"R7b-8S-STS.text" = "스마트밴드명";
+
+/* Class = "UILabel"; text = "Address of the quarantine"; ObjectID = "TjI-q6-sKn"; */
+"TjI-q6-sKn.text" = "Address of the quarantine";
+
+/* Class = "UINavigationItem"; title = "Self-quarantine management list"; ObjectID = "UI2-wl-rz3"; */
+"UI2-wl-rz3.title" = "Self-quarantine management list";
+
+/* Class = "UILabel"; text = "2020-04-01 11:11:34"; ObjectID = "V6x-IG-Khc"; */
+"V6x-IG-Khc.text" = "2020-04-01 11:11:34";
+
+/* Class = "UILabel"; text = "PASSWORD"; ObjectID = "XwT-or-cSg"; */
+"XwT-or-cSg.text" = "PASSWORD";
+
+/* Class = "UILabel"; text = "version"; ObjectID = "ZyR-R9-Njr"; */
+"ZyR-R9-Njr.text" = "version";
+
+/* Class = "UILabel"; text = "Official manager of the quarantine"; ObjectID = "aCB-Rw-aeN"; */
+"aCB-Rw-aeN.text" = "Official manager of the quarantine";
+
+/* Class = "UINavigationItem"; title = "Self-diagnosis"; ObjectID = "aMf-yB-8eO"; */
+"aMf-yB-8eO.title" = "Self-diagnosis";
+
+/* Class = "UITextView"; text = "Move the map and press the desired location for more than a second."; ObjectID = "c93-YV-lEp"; */
+"c93-YV-lEp.text" = "Move the map and press the desired location for more than a second.";
+
+/* Class = "UILabel"; text = "연결끊김"; ObjectID = "cEQ-JP-KO1"; */
+"cEQ-JP-KO1.text" = "연결끊김";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dOZ-iJ-8Cf"; */
+"dOZ-iJ-8Cf.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "See more"; ObjectID = "dbX-zV-eDl"; */
+"dbX-zV-eDl.normalTitle" = "See more";
+
+/* Class = "UINavigationItem"; title = "진단목록"; ObjectID = "dcz-8H-5Li"; */
+"dcz-8H-5Li.title" = "진단목록";
+
+/* Class = "UIBarButtonItem"; title = "뒤로"; ObjectID = "eDr-wA-se2"; */
+"eDr-wA-se2.title" = "뒤로";
+
+/* Class = "UIBarButtonItem"; title = "Logout"; ObjectID = "eJ0-Ny-WI0"; */
+"eJ0-Ny-WI0.title" = "Logout";
+
+/* Class = "UILabel"; text = "성명"; ObjectID = "hEa-Wa-WAa"; */
+"hEa-Wa-WAa.text" = "성명";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "hLr-yh-7XJ"; */
+"hLr-yh-7XJ.title" = "Item";
+
+/* Class = "UILabel"; text = "Self-quarantine numbers: 0"; ObjectID = "rJS-8i-gt6"; */
+"rJS-8i-gt6.text" = "Self-quarantine numbers: 0";
+
+/* Class = "UILabel"; text = "There is no list of quarantine."; ObjectID = "tru-NN-CJT"; */
+"tru-NN-CJT.text" = "There is no list of quarantine.";

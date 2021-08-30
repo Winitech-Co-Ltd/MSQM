@@ -1,0 +1,207 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Dialog_Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/colorDialog</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColorSecondary">@color/colorWhite</item>
+    </style>
+
+    <style name="Dialog_TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorDarkGray</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Toolbar_Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColorSecondary">@color/colorWhite</item>
+    </style>
+
+    <style name="Toolbar_TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SelectLang"/>
+    <style name="SelectLang.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="SelectLang.Select">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:background">@drawable/edittext_border</item>
+    </style>
+
+    <style name="Toggle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:checked">false</item>
+    </style>
+
+    <style name="Login"/>
+    <style name="Login.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+    <style name="Login.EditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:background">@drawable/edittext_border</item>
+    </style>
+
+
+    <style name="Enroll" />
+    <style name="Enroll.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+    <style name="Enroll.MapUI">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Enroll.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/edittext_border</item>
+        <item name="android:longClickable">false</item>
+        <item name="android:textIsSelectable">false</item>
+    </style>
+
+    <style name="Enroll.EditDisable">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/edittext_border_disable</item>
+    </style>
+
+    <style name="Enroll.Toggle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:checked">false</item>
+    </style>
+
+    <style name="Main"/>
+    <style name="Main.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@drawable/button_border</item>
+    </style>
+
+    <style name="SelfCheck"/>
+    <style name="SelfCheck.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="SelfCheck.RadioGroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">6dp</item>
+    </style>
+
+    <style name="SelfCheck.Toggle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:checked">false</item>
+    </style>
+
+    <!--dialog_manger_check-->
+    <style name="Manager"/>
+    <style name="Manager.Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+    </style>
+
+    <style name="Manager.Body">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:background">@drawable/manager_value</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+    </style>
+</resources>

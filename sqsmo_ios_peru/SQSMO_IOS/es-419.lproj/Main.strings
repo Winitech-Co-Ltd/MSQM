@@ -1,0 +1,87 @@
+
+/* Class = "UILabel"; text = "이름"; ObjectID = "0LY-nu-IH9"; */
+"0LY-nu-IH9.text" = "Nombre";
+
+/* Class = "UILabel"; text = "ID"; ObjectID = "0el-Bn-4T0"; */
+"0el-Bn-4T0.text" = "ID";
+
+/* Class = "UIBarButtonItem"; title = "뒤로"; ObjectID = "1rU-Nr-vMJ"; */
+"1rU-Nr-vMJ.title" = "Atráz";
+
+/* Class = "UIBarButtonItem"; title = "My information"; ObjectID = "44C-Mh-cro"; */
+"44C-Mh-cro.title" = "Mi Info.";
+
+/* Class = "UINavigationItem"; title = "Current location of quarantine"; ObjectID = "5z0-0O-tIg"; */
+"5z0-0O-tIg.title" = "Ubicación actual de la cuarentena";
+
+/* Class = "UIButton"; normalTitle = "Update"; ObjectID = "86A-mi-gT3"; */
+"86A-mi-gT3.normalTitle" = "Actualizar";
+
+/* Class = "UIBarButtonItem"; title = "뒤로"; ObjectID = "8wC-tt-sjJ"; */
+"8wC-tt-sjJ.title" = "Atráz";
+
+/* Class = "UITextView"; text = "격리위치 주소를 불러오고 있습니다."; ObjectID = "9N0-UX-Wbm"; */
+"9N0-UX-Wbm.text" = "Se está trayendo la dirección de la cuarentena.";
+
+/* Class = "UILabel"; text = "LOGIN"; ObjectID = "FQf-fm-OdL"; */
+"FQf-fm-OdL.text" = "Iniciar sesión";
+
+/* Class = "UILabel"; text = "이탈여부"; ObjectID = "Hao-K2-zUm"; */
+"Hao-K2-zUm.text" = "Fuera de área";
+
+/* Class = "UILabel"; text = "date"; ObjectID = "I06-XA-wTx"; */
+"I06-XA-wTx.text" = "Fecha";
+
+/* Class = "UILabel"; text = "작성여부"; ObjectID = "P8z-ib-HCx"; */
+"P8z-ib-HCx.text" = "Redactar";
+
+/* Class = "UINavigationItem"; title = "Self-diagnosis results"; ObjectID = "POb-IV-6vZ"; */
+"POb-IV-6vZ.title" = "Resultados de autodiagnóstico";
+
+/* Class = "UILabel"; text = "Address of the quarantine"; ObjectID = "TjI-q6-sKn"; */
+"TjI-q6-sKn.text" = "Dirección de la cuarentena";
+
+/* Class = "UINavigationItem"; title = "Self-quarantine management list"; ObjectID = "UI2-wl-rz3"; */
+"UI2-wl-rz3.title" = "Lista de gestión de auto cuarentena";
+
+/* Class = "UILabel"; text = "PASSWORD"; ObjectID = "XwT-or-cSg"; */
+"XwT-or-cSg.text" = "Contraseña";
+
+/* Class = "UILabel"; text = "version"; ObjectID = "ZyR-R9-Njr"; */
+"ZyR-R9-Njr.text" = "Versión";
+
+/* Class = "UILabel"; text = "Official manager of the quarantine"; ObjectID = "aCB-Rw-aeN"; */
+"aCB-Rw-aeN.text" = "Encargado oficial de la cuarentena";
+
+/* Class = "UINavigationItem"; title = "Self-diagnosis"; ObjectID = "aMf-yB-8eO"; */
+"aMf-yB-8eO.title" = "Autodiagnóstico";
+
+/* Class = "UITextView"; text = "Move the map and press the desired location for more than a second."; ObjectID = "c93-YV-lEp"; */
+"c93-YV-lEp.text" = "Mueva el mapa y presione la ubicación deseada por más de un segundo.";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dOZ-iJ-8Cf"; */
+"dOZ-iJ-8Cf.normalTitle" = "botón";
+
+/* Class = "UIButton"; normalTitle = "See more"; ObjectID = "dbX-zV-eDl"; */
+"dbX-zV-eDl.normalTitle" = "Ver más";
+
+/* Class = "UINavigationItem"; title = "진단목록"; ObjectID = "dcz-8H-5Li"; */
+"dcz-8H-5Li.title" = "Lista de diagnóstico";
+
+/* Class = "UIBarButtonItem"; title = "뒤로"; ObjectID = "eDr-wA-se2"; */
+"eDr-wA-se2.title" = "Atráz";
+
+/* Class = "UIBarButtonItem"; title = "Logout"; ObjectID = "eJ0-Ny-WI0"; */
+"eJ0-Ny-WI0.title" = "Cerrar sesión";
+
+/* Class = "UILabel"; text = "성명"; ObjectID = "hEa-Wa-WAa"; */
+"hEa-Wa-WAa.text" = "Nombre";
+
+/* Class = "UILabel"; text = "Self-quarantine numbers: 0                          "; ObjectID = "rJS-8i-gt6"; */
+"rJS-8i-gt6.text" = "Números en cuarentena: 0                          ";
+
+/* Class = "UILabel"; text = "There is no list of quarantine."; ObjectID = "tru-NN-CJT"; */
+"tru-NN-CJT.text" = "No hay lista de la cuarentena.";
+
+/* Class = "UIButton"; normalTitle = "See more"; ObjectID = "ubf-pR-G4o"; */
+"ubf-pR-G4o.normalTitle" = "Ver más";
