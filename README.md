@@ -1,8 +1,8 @@
 # MSQM
 Development of International Standard for Functional Requirements of Mobile Self quarantine Management
 ## source 
-* SQSMO - officer’s APP  android
-* SQSM - Self-quarantine citizen’s APP  android
+* SQSMO_ANDROID - officer’s APP  android
+* SQSM_ANDROID - Self-quarantine citizen’s APP  android
 * sqsm_ios - Self-quarantine citizen’s APP  IOS
 * sqsmo_ios - officer’s APP  IOS
 * server_push-master - push server
