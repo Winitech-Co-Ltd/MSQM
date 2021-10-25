@@ -1,9 +1,9 @@
 # MSQM
 Development of International Standard for Functional Requirements of Mobile Self quarantine Management
 ## source 
-* SQSMO_PERU - 전담공무원 android
-* SQSM_PERU - 자가격리자 android
-* sqsm_ios_peru - 자가격리자 IOS
-* sqsmo_ios_peru - 전담공무원 IOS
+* SQSMO_PERU - officer’s APP  android
+* SQSM_PERU - Self-quarantine citizen’s APP  android
+* sqsm_ios_peru - Self-quarantine citizen’s APP  IOS
+* sqsmo_ios_peru - officer’s APP  IOS
 * peru_server_push-master - push server
-* peru_server-master - 자가격리자 서버
+* peru_server-master - Self-quarantine citizen’s APP  was
